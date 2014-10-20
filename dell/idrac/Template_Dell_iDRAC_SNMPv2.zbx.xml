@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>2.0</version>
-    <date>2014-10-14T19:29:25Z</date>
+    <date>2014-10-20T18:04:59Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -1893,18 +1893,6 @@
                                         <key>FanSpeed.[{#SNMPINDEX}]</key>
                                     </item>
                                 </graph_item>
-                                <graph_item>
-                                    <sortorder>1</sortorder>
-                                    <drawtype>0</drawtype>
-                                    <color>00C800</color>
-                                    <yaxisside>1</yaxisside>
-                                    <calc_fnc>2</calc_fnc>
-                                    <type>0</type>
-                                    <item>
-                                        <host>Template Dell iDrac SNMPV2</host>
-                                        <key>FanStatus.[{#SNMPINDEX}]</key>
-                                    </item>
-                                </graph_item>
                             </graph_items>
                         </graph_prototype>
                     </graph_prototypes>
@@ -2291,7 +2279,9 @@
                                     <name>Network Cards</name>
                                 </application>
                             </applications>
-                            <valuemap/>
+                            <valuemap>
+                                <name>Dell iDRAC Network Device Connection Status</name>
+                            </valuemap>
                             <logtimefmt/>
                         </item_prototype>
                         <item_prototype>
@@ -2897,6 +2887,92 @@
                     <description/>
                     <item_prototypes>
                         <item_prototype>
+                            <name>Temperature Sensor {#SNMPVALUE} Critical Low-Limit</name>
+                            <type>4</type>
+                            <snmp_community>public</snmp_community>
+                            <multiplier>1</multiplier>
+                            <snmp_oid>1.3.6.1.4.1.674.10892.5.4.700.20.1.13.1.{#SNMPINDEX}</snmp_oid>
+                            <key>TempCritLowLimit.[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>0</value_type>
+                            <allowed_hosts/>
+                            <units>C</units>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>0.1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Temperatures</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Temperature Sensor {#SNMPVALUE} Critical Up-Limit</name>
+                            <type>4</type>
+                            <snmp_community>public</snmp_community>
+                            <multiplier>1</multiplier>
+                            <snmp_oid>1.3.6.1.4.1.674.10892.5.4.700.20.1.10.1.{#SNMPINDEX}</snmp_oid>
+                            <key>TempCritUpLimit.[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>0</value_type>
+                            <allowed_hosts/>
+                            <units>C</units>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>0.1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Temperatures</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                        </item_prototype>
+                        <item_prototype>
                             <name>Temperature Sensor {#SNMPVALUE} Status</name>
                             <type>4</type>
                             <snmp_community>public</snmp_community>
@@ -2986,6 +3062,92 @@
                             </valuemap>
                             <logtimefmt/>
                         </item_prototype>
+                        <item_prototype>
+                            <name>Temperature Sensor {#SNMPVALUE} Warning Low-Limit</name>
+                            <type>4</type>
+                            <snmp_community>public</snmp_community>
+                            <multiplier>1</multiplier>
+                            <snmp_oid>1.3.6.1.4.1.674.10892.5.4.700.20.1.12.1.{#SNMPINDEX}</snmp_oid>
+                            <key>TempWarnLowLimit.[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>0</value_type>
+                            <allowed_hosts/>
+                            <units>C</units>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>0.1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Temperatures</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                        </item_prototype>
+                        <item_prototype>
+                            <name>Temperature Sensor {#SNMPVALUE} Warning Up-Limit</name>
+                            <type>4</type>
+                            <snmp_community>public</snmp_community>
+                            <multiplier>1</multiplier>
+                            <snmp_oid>1.3.6.1.4.1.674.10892.5.4.700.20.1.11.1.{#SNMPINDEX}</snmp_oid>
+                            <key>TempWarnUpLimit.[{#SNMPINDEX}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>0</value_type>
+                            <allowed_hosts/>
+                            <units>C</units>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>0.1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>Temperatures</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                        </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
@@ -2995,6 +3157,50 @@
                             <status>0</status>
                             <priority>2</priority>
                             <description/>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template Dell iDrac SNMPV2:TempValue.[{#SNMPINDEX}].last()} &gt;= {Template Dell iDrac SNMPV2:TempCritUpLimit.[{#SNMPINDEX}].last()}</expression>
+                            <name>Temperature on {#SNMPVALUE} critically high</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description>Temperature of the item is above Critical Level.</description>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template Dell iDrac SNMPV2:TempValue.[{#SNMPINDEX}].last()} &lt;= {Template Dell iDrac SNMPV2:TempCritLowLimit.[{#SNMPINDEX}].last()}</expression>
+                            <name>Temperature on {#SNMPVALUE} critically low</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description>Temperature of the item is below Critical Level.</description>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template Dell iDrac SNMPV2:TempValue.[{#SNMPINDEX}].last()} &gt; {Template Dell iDrac SNMPV2:TempWarnUpLimit.[{#SNMPINDEX}].last()}&#13;
+&#13;
+and&#13;
+&#13;
+{Template Dell iDrac SNMPV2:TempValue.[{#SNMPINDEX}].last()} &lt; {Template Dell iDrac SNMPV2:TempCritUpLimit.[{#SNMPINDEX}].last()}</expression>
+                            <name>Temperature on {#SNMPVALUE} to high</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description>Temperature of the item is above Warning Level.</description>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template Dell iDrac SNMPV2:TempValue.[{#SNMPINDEX}].last()} &lt; {Template Dell iDrac SNMPV2:TempWarnLowLimit.[{#SNMPINDEX}].last()}&#13;
+&#13;
+and&#13;
+&#13;
+{Template Dell iDrac SNMPV2:TempValue.[{#SNMPINDEX}].last()} &gt; {Template Dell iDrac SNMPV2:TempCritLowLimit.[{#SNMPINDEX}].last()}</expression>
+                            <name>Temperature on {#SNMPVALUE} to low</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description>Temperature of the item is below Warning Level.</description>
                             <type>0</type>
                         </trigger_prototype>
                     </trigger_prototypes>
@@ -3145,6 +3351,16 @@
             <dependencies/>
         </trigger>
         <trigger>
+            <expression>{Template Dell iDrac SNMPV2:GlobalSystemRollupStatus.last(0)}&lt;&gt;3</expression>
+            <name>Overall System Rollup Status Error</name>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
             <expression>{Template Dell iDrac SNMPV2:GlobalSystemRollupStatus.last(0)}&gt;4</expression>
             <name>Overall System Rollup Status Error</name>
             <url/>
@@ -3155,11 +3371,21 @@
             <dependencies/>
         </trigger>
         <trigger>
-            <expression>{Template Dell iDrac SNMPV2:GlobalSystemRollupStatus.last(0)}&lt;&gt;3</expression>
-            <name>Overall System Rollup Status Error</name>
+            <expression>{Template Dell iDrac SNMPV2:GlobalSystemStatus.last()}&lt;&gt;3</expression>
+            <name>Overall System Status Error</name>
             <url/>
             <status>0</status>
             <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+        <trigger>
+            <expression>{Template Dell iDrac SNMPV2:GlobalSystemStatus.last()}&gt;4</expression>
+            <name>Overall System Status Error</name>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
             <description/>
             <type>0</type>
             <dependencies/>

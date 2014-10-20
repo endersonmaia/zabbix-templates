@@ -1,14 +1,14 @@
 # zabbix
 
-A collections of templates and scripts for Zabbix.
+A collection of templates and scripts for Zabbix.
 
 ##  Objective
 
-The objetcive is try to use native zabbix-agent items and SNMP.
+The objective is try to use native zabbix-agent items and SNMP.
 
 ## TODO
 
-- [ ] Create a template for Dell iDRAC 7 via SNMPv2
+- [x] Create a template for Dell iDRAC 7 via SNMPv2
 - [ ] Create a template for monitoring nginx
 - [ ] Create a template for monitoring php-fpm
 
