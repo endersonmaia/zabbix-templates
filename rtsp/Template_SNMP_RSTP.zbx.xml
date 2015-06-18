@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>2.0</version>
+    <date>2015-06-18T17:18:02Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template SNMP RSTP</template>
+            <name>Template SNMP RSTP</name>
+            <description>Template SNMP Rapid Spanning Tree Protocol&#13;
+&#13;
+Template for switches that are configured to use RSTP.</description>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>RSTP</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>RSTP Root Port</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>0</multiplier>
+                    <snmp_oid>1.3.6.1.2.1.17.2.7.0</snmp_oid>
+                    <key>rstp.root_port</key>
+                    <delay>60</delay>
+                    <history>7</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>1</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>RSTP</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+                <item>
+                    <name>RSTP Time Since Last Topology Change</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <multiplier>1</multiplier>
+                    <snmp_oid>1.3.6.1.2.1.17.2.3.0</snmp_oid>
+                    <key>rstp.topology_uptime</key>
+                    <delay>60</delay>
+                    <history>90</history>
+                    <trends>365</trends>
+                    <status>0</status>
+                    <value_type>0</value_type>
+                    <allowed_hosts/>
+                    <units>uptime</units>
+                    <delta>0</delta>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <formula>0.0417</formula>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <data_type>0</data_type>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>Rapid Spanning Tree Protocol - Time Since Last Topology Change (Timeticks)&#13;
+&#13;
+Reference: &quot;IEEE 802.1D-1990: Section 6.8.1.1.3&quot;</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>RSTP</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                </item>
+            </items>
+            <discovery_rules>
+                <discovery_rule>
+                    <name>RSTP Interfaces</name>
+                    <type>4</type>
+                    <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                    <snmp_oid>1.3.6.1.2.1.17.2.15.1.1</snmp_oid>
+                    <key>rstp.interfaces</key>
+                    <delay>86400</delay>
+                    <status>0</status>
+                    <allowed_hosts/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <delay_flex/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <filter>
+                        <evaltype>0</evaltype>
+                        <formula/>
+                        <conditions>
+                            <condition>
+                                <macro>{#SNMPVALUE}</macro>
+                                <value>(45|46)</value>
+                                <operator>8</operator>
+                                <formulaid>A</formulaid>
+                            </condition>
+                        </conditions>
+                    </filter>
+                    <lifetime>30</lifetime>
+                    <description>To discover only the interfaces that have RSTP enabled, add a Filter for {$SNMPVALUE} as (45|46). Assuming the ports 45 and 46 have RSTP enabled and working.</description>
+                    <item_prototypes>
+                        <item_prototype>
+                            <name>RSTP Port $1 State</name>
+                            <type>4</type>
+                            <snmp_community>{$SNMP_COMMUNITY}</snmp_community>
+                            <multiplier>0</multiplier>
+                            <snmp_oid>1.3.6.1.2.1.17.2.15.1.3.{#SNMPINDEX}</snmp_oid>
+                            <key>rstp.port_state[{#SNMPVALUE}]</key>
+                            <delay>30</delay>
+                            <history>90</history>
+                            <trends>365</trends>
+                            <status>0</status>
+                            <value_type>3</value_type>
+                            <allowed_hosts/>
+                            <units/>
+                            <delta>0</delta>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <formula>1</formula>
+                            <delay_flex/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <data_type>0</data_type>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description>Rapid Spanning Tree Protocol - Port State&#13;
+&#13;
+Reference: &quot;IEEE 802.1D-1990: Section 4.5.5.2&quot;</description>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>RSTP</name>
+                                </application>
+                            </applications>
+                            <valuemap>
+                                <name>RSTP Port State</name>
+                            </valuemap>
+                            <logtimefmt/>
+                        </item_prototype>
+                    </item_prototypes>
+                    <trigger_prototypes>
+                        <trigger_prototype>
+                            <expression>{Template SNMP RSTP:rstp.port_state[{#SNMPVALUE}].last()} =2</expression>
+                            <name>RSTP Port {#SNMPVALUE} Blocking</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>1</priority>
+                            <description>The possible states for a RSTP enabled port are :&#13;
+&#13;
+1 ⇒ disabled&#13;
+2 ⇒ blocking&#13;
+3 ⇒ listening&#13;
+4 ⇒ learning&#13;
+5 ⇒ forwarding&#13;
+6 ⇒ broken&#13;
+&#13;
+When its 2 ⇒ blocking it's Blocking. That RSTP path is blocke to avoid loop, when the other path is failing, this will change to 5 ⇒ forwarding.</description>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>( {Template SNMP RSTP:rstp.port_state[{#SNMPVALUE}].last()} &gt; 5 or {Template SNMP RSTP:rstp.port_state[{#SNMPVALUE}].last()} &lt; 3 ) and&#13;
+{Template SNMP RSTP:rstp.port_state[{#SNMPVALUE}].last()} &lt;&gt; 2</expression>
+                            <name>RSTP Port {#SNMPVALUE} Not Forwarding</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>4</priority>
+                            <description>The possible states for a RSTP enabled port are :&#13;
+&#13;
+1 ⇒ disabled&#13;
+2 ⇒ blocking&#13;
+3 ⇒ listening&#13;
+4 ⇒ learning&#13;
+5 ⇒ forwarding&#13;
+6 ⇒ broken&#13;
+&#13;
+It's listening or learning before forwarding, if none of these, it's Error (High).</description>
+                            <type>0</type>
+                        </trigger_prototype>
+                        <trigger_prototype>
+                            <expression>{Template SNMP RSTP:rstp.port_state[{#SNMPVALUE}].last()} &gt; 2 and {Template SNMP RSTP:rstp.port_state[{#SNMPVALUE}].last()} &lt; 5</expression>
+                            <name>RSTP Port {#SNMPVALUE} Preparing State</name>
+                            <url/>
+                            <status>0</status>
+                            <priority>2</priority>
+                            <description>Possible RSTP Port State values are: &#13;
+&#13;
+1 ⇒ disabled&#13;
+2 ⇒ blocking&#13;
+3 ⇒ listening&#13;
+4 ⇒ learning&#13;
+5 ⇒ forwarding&#13;
+6 ⇒ broken&#13;
+&#13;
+It's listening or learning before it's forwarding. If it's on 3 or 4 state for to long, maybe something is wrong.</description>
+                            <type>0</type>
+                        </trigger_prototype>
+                    </trigger_prototypes>
+                    <graph_prototypes/>
+                    <host_prototypes/>
+                </discovery_rule>
+            </discovery_rules>
+            <macros/>
+            <templates/>
+            <screens/>
+        </template>
+    </templates>
+    <triggers>
+        <trigger>
+            <expression>{Template SNMP RSTP:rstp.root_port.abschange()}&gt;1</expression>
+            <name>RSTP Root Port Change (now is {ITEM.LASTVALUE}) on {HOST.NAME}</name>
+            <url/>
+            <status>0</status>
+            <priority>2</priority>
+            <description/>
+            <type>0</type>
+            <dependencies/>
+        </trigger>
+    </triggers>
+</zabbix_export>
