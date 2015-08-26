@@ -9,7 +9,7 @@ website: https://github.com/endersonmaia/zabbix-templates/tree/master/dell/idrac
 add k/v(s) as given below:
 --------------------------
 DellDracDiskState	
-3 -> Good
+3 -> Online
 
 Dell iDRAC Network Device Connection Status	
 1 -> Down
