@@ -22,24 +22,17 @@ TODO: detail the items, triggers and graphs
 
 ### Voltages
 
-## Credits
+## Setup
 
-I found this template at [Zabbix Forum](https://www.zabbix.com/forum) thread [#43517](https://www.zabbix.com/forum/showthread.php?t=43517), and I'm enhancing it.
-
--------
-##according to this thread:
-https://www.zabbix.com/forum/showpost.php?p=146120&postcount=15
+Some Value Mapping needs to be created prior to the utilization of this template.
 
 Menu: Administration->General->Value mapping->Create value map
-CONFIGURATION OF VALUE MAPPING
 
-##notice: 
-1) use Template_Dell_iDRAC_SNMPv2.zbx.xml
-2) website: https://github.com/endersonmaia/zabbix-templates/tree/master/dell/idrac
+Create all the following Value Mapping
 
-##add k/v(s) as given below:
---------------------------
-DellDracDiskState	
+* DellDracDiskState	
+
+````
 1 -> Unknown
 2 -> Ready
 3 -> Online
@@ -49,26 +42,38 @@ DellDracDiskState
 7 -> Failed
 8 -> Non-RAID
 9 -> Removed
+````
 
-Dell iDRAC Network Device Connection Status	
+* Dell iDRAC Network Device Connection Status	
+
+````
 1 -> Down
 2 -> Up
+````
 
-Dell Open Manage System Status	
+* Dell Open Manage System Status	
+
+````
 1 -> Other
 2 -> Unknown
 3 -> OK
 4 -> NonCritical
 5 -> Critical
 6 -> NonRecoverable
+````
 
-DellPowerState	
+* DellPowerState	
+
+````
 1 -> Other
 2 -> Unknown
 3 -> Off
 4 -> On
+````
 
-Dell PSU State Settings	
+* Dell PSU State Settings	
+
+````
 1 -> Unknown
 2 -> Online (state disabled)
 4 -> not Ready
@@ -76,8 +81,11 @@ Dell PSU State Settings
 10 -> Online and Fan Failure
 16 -> On
 242 -> Online and OK
+````
 
-DellRaidLevel	
+* DellRaidLevel	
+
+````
 1 -> Unknown
 2 -> RAID-0
 3 -> RAID-1
@@ -88,20 +96,28 @@ DellRaidLevel
 8 -> RAID-60
 9 -> Concatenated RAID 1
 10 -> Concatenated RAID 5
+````
 
-DellRaidVolumeState	
+* DellRaidVolumeState	
+
+````
 1 -> Unknown
 2 -> Online
 3 -> Failed
 4 -> Degraded
+````
 
-Dell_PSU_SensorState	
+* Dell_PSU_SensorState	
+
+````
 1 -> Presence Detected
 2 -> PS Failure
 4 -> Predictuve Failure
 8 -> PS AC lost
 16 -> AC lost or out of range
 32 -> AC out of range but still present
+````
 
---------------------------
+## Credits
 
+I found this template at [Zabbix Forum](https://www.zabbix.com/forum) thread [#43517](https://www.zabbix.com/forum/showthread.php?t=43517), and I'm enhancing it.xz
