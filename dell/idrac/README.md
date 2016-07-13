@@ -47,8 +47,8 @@ Create all the following Value Mapping
 * Dell iDRAC Network Device Connection Status	
 
 ````
-1 -> Down
-2 -> Up
+1 -> Connected
+2 -> Disconnected
 ````
 
 * Dell Open Manage System Status	
