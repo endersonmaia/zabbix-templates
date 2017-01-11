@@ -1,6 +1,6 @@
-# RTSP via SNMP
+# RSTP via SNMP
 
-This template uses a Discovery Rule to find interfaces of a switch that has RTSP enabled, and add trigger to monitor it's status. In case you only want to monitor some of the interfaces, you have to change the filter rules.
+This template uses a Discovery Rule to find interfaces of a switch that has RSTP enabled, and add trigger to monitor it's status. In case you only want to monitor some of the interfaces, you have to change the filter rules.
 
 ## Installing
 

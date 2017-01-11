@@ -11,7 +11,7 @@ The objective is try to use native zabbix-agent items and SNMP when possible.
 - [x] Create a template for Dell iDRAC 7 via SNMPv2
 - [x] Create a template for monitoring nginx
 - [ ] Create a template for monitoring php-fpm
-- [x] Create a template for monitoring RTSP (Rapid Spanning Tree Protocol) via SNMPv2
+- [x] Create a template for monitoring RSTP (Rapid Spanning Tree Protocol) via SNMPv2
 
 ## LICENSE
 
