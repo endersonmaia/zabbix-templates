@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>3.0</version>
+    <date>2017-06-26T20:01:31Z</date>
+    <value_maps>
+        <value_map>
+            <name>DellDracDiskState</name>
+            <mappings>
+                <mapping><value>1</value><newvalue>Unknown</newvalue></mapping>
+                <mapping><value>2</value><newvalue>Ready</newvalue></mapping>
+                <mapping><value>3</value><newvalue>Online</newvalue></mapping>
+                <mapping><value>4</value><newvalue>Foreign</newvalue></mapping>
+                <mapping><value>5</value><newvalue>Offline</newvalue></mapping>
+                <mapping><value>6</value><newvalue>Blocked</newvalue></mapping>
+                <mapping><value>7</value><newvalue>Failed</newvalue></mapping>
+                <mapping><value>8</value><newvalue>Non-RAID</newvalue></mapping>
+                <mapping><value>9</value><newvalue>Removed</newvalue></mapping>
+            </mappings>
+        </value_map>
+
+        <value_map>
+            <name>Dell iDRAC Network Device Connection Status</name>
+            <mappings>
+                <mapping><value>1</value><newvalue>Connected</newvalue></mapping>
+                <mapping><value>2</value><newvalue>Disconnected</newvalue></mapping>
+            </mappings>
+        </value_map>
+
+        <value_map>
+            <name>Dell Open Manage System Status</name>
+            <mappings>
+                <mapping><value>1</value><newvalue>Other</newvalue></mapping>
+                <mapping><value>2</value><newvalue>Unknown</newvalue></mapping>
+                <mapping><value>3</value><newvalue>OK</newvalue></mapping>
+                <mapping><value>4</value><newvalue>NonCritical</newvalue></mapping>
+                <mapping><value>5</value><newvalue>Critical</newvalue></mapping>
+                <mapping><value>6</value><newvalue>NonRecoverable</newvalue></mapping>
+            </mappings>
+        </value_map>
+
+        <value_map>
+            <name>DellPowerState</name>
+            <mappings>
+                <mapping><value>1</value><newvalue>Other</newvalue></mapping>
+                <mapping><value>2</value><newvalue>Unknown</newvalue></mapping>
+                <mapping><value>3</value><newvalue>Off</newvalue></mapping>
+                <mapping><value>4</value><newvalue>On</newvalue></mapping>
+            </mappings>
+        </value_map>
+
+        <value_map>
+            <name>Dell PSU State Settings</name>
+            <mappings>
+                <mapping><value>1</value><newvalue>Unknown</newvalue></mapping>
+                <mapping><value>2</value><newvalue>Online (state disabled)</newvalue></mapping>
+                <mapping><value>4</value><newvalue>not Ready</newvalue></mapping>
+                <mapping><value>8</value><newvalue>Fan Failure</newvalue></mapping>
+                <mapping><value>10</value><newvalue>Online and Fan Failure</newvalue></mapping>
+                <mapping><value>16</value><newvalue>On</newvalue></mapping>
+                <mapping><value>242</value><newvalue>Online and OK</newvalue></mapping>
+            </mappings>
+        </value_map>
+
+        <value_map>
+            <name>DellRaidLevel</name>
+            <mappings>
+                <mapping><value>1</value><newvalue>Unknown</newvalue></mapping>
+                <mapping><value>2</value><newvalue>RAID-0</newvalue></mapping>
+                <mapping><value>3</value><newvalue>RAID-1</newvalue></mapping>
+                <mapping><value>4</value><newvalue>RAID-5</newvalue></mapping>
+                <mapping><value>5</value><newvalue>RAID-6</newvalue></mapping>
+                <mapping><value>6</value><newvalue>RAID-10</newvalue></mapping>
+                <mapping><value>7</value><newvalue>RAID-50</newvalue></mapping>
+                <mapping><value>8</value><newvalue>RAID-60</newvalue></mapping>
+                <mapping><value>9</value><newvalue>Concatenated RAID 1</newvalue></mapping>
+                <mapping><value>10</value><newvalue>Concatenated RAID 5</newvalue></mapping>
+            </mappings>
+        </value_map>
+
+        <value_map>
+            <name>DellRaidVolumeState</name>
+            <mappings>
+                <mapping><value>1</value><newvalue>Unknown</newvalue></mapping>
+                <mapping><value>2</value><newvalue>Online</newvalue></mapping>
+                <mapping><value>3</value><newvalue>Failed</newvalue></mapping>
+                <mapping><value>4</value><newvalue>Degraded</newvalue></mapping>
+            </mappings>
+        </value_map>
+
+        <value_map>
+            <name>Dell_PSU_SensorState</name>
+            <mappings>
+                <mapping><value>1</value><newvalue>Presence Detected</newvalue></mapping>
+                <mapping><value>2</value><newvalue>PS Failure</newvalue></mapping>
+                <mapping><value>4</value><newvalue>Predictuve Failure</newvalue></mapping>
+                <mapping><value>8</value><newvalue>PS AC lost</newvalue></mapping>
+                <mapping><value>16</value><newvalue>AC lost or out of range</newvalue></mapping>
+                <mapping><value>32</value><newvalue>AC out of range but still present</newvalue></mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
+</zabbix_export>

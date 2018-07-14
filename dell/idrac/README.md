@@ -24,7 +24,9 @@ TODO: detail the items, triggers and graphs
 
 ## Setup
 
-Some Value Mapping needs to be created prior to the utilization of this template.
+If ou are using a Zabbix version >= 3.0, you can import the `ValueMaps_Dell_iDRAC.zbx.xml` and the choosen `Template_Dell_iDRAC_SNMPv{23}.zbx.xml` file for this to work.
+
+If you are using a Zabbix version < 3.0, you need to create the Value Mapping prior to the import of the templates, for it to work as expected.
 
 Menu: Administration->General->Value mapping->Create value map
 
