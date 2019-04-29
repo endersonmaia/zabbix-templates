@@ -33,3 +33,4 @@ If blocking (2 - OK), means that another path is beeing used.
 
 * https://www.ietf.org/rfc/rfc1493.txt
 * https://standards.ieee.org/findstds/standard/802.1D-1990.html
+* https://oidref.com/1.3.6.1.2.1.17.2
